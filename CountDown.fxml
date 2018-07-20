@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="276.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CountDownController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="129.0" minHeight="0.0" prefHeight="62.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="267.0" minHeight="0.0" prefHeight="101.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="216.0" minHeight="10.0" prefHeight="116.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <Label alignment="CENTER" focusTraversable="false" maxWidth="1.7976931348623157E308" text="Enter or load hours" textAlignment="CENTER" />
+      <VBox prefHeight="200.0" prefWidth="100.0" GridPane.rowIndex="1">
+         <children>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="hourTextField" alignment="CENTER" editable="false" focusTraversable="false" promptText="Hour" />
+                  <TextField fx:id="minuteTextField" alignment="CENTER" editable="false" focusTraversable="false" promptText="Minute" />
+                  <TextField fx:id="secondsTextField" alignment="CENTER" editable="false" focusTraversable="false" promptText="Second" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" GridPane.rowIndex="2">
+         <children>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="100.0" spacing="20.0">
+               <children>
+                  <TextField fx:id="enterHourTextField" />
+                  <Button fx:id="enterValueButton" mnemonicParsing="false" onAction="#enterHourButton" text="Set Hour" wrapText="true" />
+               </children>
+            </VBox>
+            <Button mnemonicParsing="false" onAction="#startPressAction" prefHeight="25.0" prefWidth="150.0" text="Start" />
+            <Button mnemonicParsing="false" onAction="#stopPressAction" prefHeight="25.0" prefWidth="150.0" text="Stop" />
+            <VBox alignment="CENTER" prefHeight="115.0" prefWidth="133.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#saveTextAction" prefHeight="25.0" prefWidth="100.0" text="Save" />
+                  <Button mnemonicParsing="false" onAction="#loadTextAction" prefHeight="25.0" prefWidth="100.0" text="Load" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="8.0" left="8.0" right="8.0" top="8.0" />
+   </padding>
+</GridPane>
